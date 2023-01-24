@@ -63,9 +63,17 @@ group :development do
   gem 'rubocop-rails', require: false
 end
 
-group :production do
-  gem 'pg'
+group :test do
+  gem 'capybara', '~> 3.23'
+  gem 'selenium-webdriver'
+  gem 'webdrivers' 
 end
+
+# ↓後で戻す
+# group :production do
+#   gem 'pg'
+# end
+# ↑後で戻す
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
